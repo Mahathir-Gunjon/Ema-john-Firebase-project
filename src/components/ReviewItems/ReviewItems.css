@@ -1,0 +1,28 @@
+.review-item{
+    border: 1px solid #a8a8a8;
+    width: 500px;
+    padding: 10px;
+    margin: 10px auto;    
+    display: flex;
+}
+.review-item img{
+    width: 100px;
+    height: 100px;
+    border-radius: 5%;
+    margin-right: 10px;
+
+}
+
+.detaails{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.detail p{
+    margin: 0;
+
+}
+.dlt-icon{
+    color: rgb(194, 0, 0);
+    
+}
