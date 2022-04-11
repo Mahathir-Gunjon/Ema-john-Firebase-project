@@ -7,11 +7,11 @@ import Cart from '../Cart/Cart';
 import ReviewItems from '../ReviewItems/ReviewItems';
 
 const Order = () => {
-    const [products, setProducts]= useProducts();
+    const [products, setProducts] = useProducts();
     const [cart, setCart] = useCart(products);
     const navigate = useNavigate()
 
-    const handleRemoveProducts = product =>{
+    const handleRemoveProducts = product => {
         const rest = cart.filter(pd => pd.id !== product.id)
         setCart(rest)
         removeFromDb(product.id)
@@ -30,9 +30,8 @@ const Order = () => {
             </div>
             <div className="cart-container">
                 <Cart cart={cart}>
-                    <Link to='/inventory'>
-                        <button onClick={()=> navigate('/inventory')}>proceed checkout</button>
-                    </Link>
+                    <button onClick={() => navigate('/shipment')}>Check Shipping</button>
+
                 </Cart>
             </div>
         </div>
